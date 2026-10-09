@@ -1,0 +1,202 @@
+[
+    {
+        "chunk_id": "bm25_chunk_1",
+        "source": "bm25.txt",
+        "text": "BM25 is a traditional information retrieval algorithm used to rank documents according to their relevance to a search query. It is based mainly on the frequency of query terms and how common those terms are across the document collection. BM25"
+    },
+    {
+        "chunk_id": "bm25_chunk_2",
+        "source": "bm25.txt",
+        "text": "those terms are across the document collection. BM25 can work particularly well when a question contains important technical keywords. Unlike semantic retrieval, BM25 does not need an embedding model. It tokenizes documents and queries and calculates a relevance score for"
+    },
+    {
+        "chunk_id": "bm25_chunk_3",
+        "source": "bm25.txt",
+        "text": "and queries and calculates a relevance score for each document. One advantage of BM25 is that it is simple, fast, and interpretable. However, it may struggle when the wording of a question differs significantly from the wording in a relevant"
+    },
+    {
+        "chunk_id": "bm25_chunk_4",
+        "source": "bm25.txt",
+        "text": "differs significantly from the wording in a relevant document. This is one reason hybrid retrieval combines lexical retrieval methods such as BM25 with semantic retrieval."
+    },
+    {
+        "chunk_id": "chunking_chunk_1",
+        "source": "chunking.txt",
+        "text": "Chunking is the process of dividing large documents into smaller passages before retrieval. Large documents are usually too big to send directly into a retrieval or generation pipeline. Smaller chunks allow the retrieval system to identify the specific passages that"
+    },
+    {
+        "chunk_id": "chunking_chunk_2",
+        "source": "chunking.txt",
+        "text": "retrieval system to identify the specific passages that are relevant to a question. A chunk size determines approximately how much text each passage contains. Chunk overlap allows consecutive chunks to share some words. Overlap can help preserve context when an"
+    },
+    {
+        "chunk_id": "chunking_chunk_3",
+        "source": "chunking.txt",
+        "text": "words. Overlap can help preserve context when an important sentence crosses a chunk boundary. Poor chunking can reduce retrieval quality. Chunks that are too small may lose useful context, while chunks that are too large may contain unrelated information. A"
+    },
+    {
+        "chunk_id": "chunking_chunk_4",
+        "source": "chunking.txt",
+        "text": "are too large may contain unrelated information. A practical RAG system should choose chunk sizes based on the type and structure of the documents."
+    },
+    {
+        "chunk_id": "embedding_chunk_1",
+        "source": "embedding.txt",
+        "text": "Text embeddings are numerical representations of text. An embedding model converts a sentence, paragraph, or document into a vector containing many numerical dimensions. Texts with similar meanings tend to have vectors that are close together in the embedding space. Semantic"
+    },
+    {
+        "chunk_id": "embedding_chunk_2",
+        "source": "embedding.txt",
+        "text": "are close together in the embedding space. Semantic search uses embeddings to find information based on meaning rather than only exact keywords. For example, a question about loading documents may retrieve a passage discussing document ingestion even if the word"
+    },
+    {
+        "chunk_id": "embedding_chunk_3",
+        "source": "embedding.txt",
+        "text": "passage discussing document ingestion even if the word loading is not present. The all-MiniLM-L6-v2 model is a commonly used sentence-transformer model for generating compact text embeddings. It produces vectors with 384 dimensions. During retrieval, the question is converted into an"
+    },
+    {
+        "chunk_id": "embedding_chunk_4",
+        "source": "embedding.txt",
+        "text": "During retrieval, the question is converted into an embedding and compared with stored document embeddings using a similarity measure such as cosine similarity."
+    },
+    {
+        "chunk_id": "evalution_chunk_1",
+        "source": "evalution.txt",
+        "text": "Evaluation measures how well a RAG system performs on a collection of test questions. Retrieval evaluation can use metrics such as Recall at K, Precision at K, Mean Reciprocal Rank, and normalized Discounted Cumulative Gain. Recall measures whether the relevant"
+    },
+    {
+        "chunk_id": "evalution_chunk_2",
+        "source": "evalution.txt",
+        "text": "Discounted Cumulative Gain. Recall measures whether the relevant information was retrieved. Precision measures how much of the retrieved information is relevant. Mean Reciprocal Rank measures how high the first relevant result appears in the ranking. Generation evaluation can examine answer"
+    },
+    {
+        "chunk_id": "evalution_chunk_3",
+        "source": "evalution.txt",
+        "text": "in the ranking. Generation evaluation can examine answer correctness, faithfulness, context relevance, and citation correctness. A complete evaluation can also record latency, token usage, and estimated cost. Comparing BM25, dense retrieval, hybrid retrieval, and reranked retrieval helps identify which components"
+    },
+    {
+        "chunk_id": "evalution_chunk_4",
+        "source": "evalution.txt",
+        "text": "retrieval, and reranked retrieval helps identify which components improve the system."
+    },
+    {
+        "chunk_id": "llm_chunk_1",
+        "source": "llm.txt",
+        "text": "A large language model, or LLM, is a machine learning model trained to understand and generate human language. LLMs can answer questions, summarize information, write code, and perform many other language-related tasks. In a RAG system, the LLM is usually"
+    },
+    {
+        "chunk_id": "llm_chunk_2",
+        "source": "llm.txt",
+        "text": "In a RAG system, the LLM is usually used after the retrieval stage. Retrieved document chunks are placed into a context supplied to the model. The model then generates an answer using that context. Grounded generation means that the generated"
+    },
+    {
+        "chunk_id": "llm_chunk_3",
+        "source": "llm.txt",
+        "text": "that context. Grounded generation means that the generated answer is supported by the retrieved information. A good RAG system should avoid inventing facts that are not present in its available context. When the required information cannot be found, the system"
+    },
+    {
+        "chunk_id": "llm_chunk_4",
+        "source": "llm.txt",
+        "text": "the required information cannot be found, the system can be instructed to state that there is insufficient information."
+    },
+    {
+        "chunk_id": "prompt_chunk_1",
+        "source": "prompt.txt",
+        "text": "Prompt engineering is the practice of designing instructions that guide a language model toward a desired response. In a RAG system, prompts can define how the model should use retrieved context and how it should respond when information is missing."
+    },
+    {
+        "chunk_id": "prompt_chunk_2",
+        "source": "prompt.txt",
+        "text": "how it should respond when information is missing. A retrieval prompt commonly contains the user's question, retrieved context, and instructions for generating an answer. The instructions can require the model to use only the supplied context and avoid unsupported claims."
+    },
+    {
+        "chunk_id": "prompt_chunk_3",
+        "source": "prompt.txt",
+        "text": "only the supplied context and avoid unsupported claims. Clear prompts can also specify output requirements such as concise explanations, citations, structured answers, or uncertainty statements. Prompt design does not replace good retrieval, because a language model cannot reliably answer a"
+    },
+    {
+        "chunk_id": "prompt_chunk_4",
+        "source": "prompt.txt",
+        "text": "because a language model cannot reliably answer a question from context that was never retrieved."
+    },
+    {
+        "chunk_id": "python_chunk_1",
+        "source": "python.txt",
+        "text": "Python is a general-purpose programming language widely used in software development, automation, data analysis, machine learning, and artificial intelligence. Its readable syntax makes it popular for both beginners and experienced developers. Python provides many libraries for building data and AI"
+    },
+    {
+        "chunk_id": "python_chunk_2",
+        "source": "python.txt",
+        "text": "provides many libraries for building data and AI applications. Libraries can be installed using package managers such as pip. Virtual environments can be used to keep project dependencies isolated from other Python projects. Python programs can work with files, databases,"
+    },
+    {
+        "chunk_id": "python_chunk_3",
+        "source": "python.txt",
+        "text": "projects. Python programs can work with files, databases, web services, APIs, and machine learning models. In a RAG project, Python can be used to load documents, clean text, create chunks, generate embeddings, perform retrieval, rerank results, call a language model,"
+    },
+    {
+        "chunk_id": "python_chunk_4",
+        "source": "python.txt",
+        "text": "perform retrieval, rerank results, call a language model, and evaluate the final system."
+    },
+    {
+        "chunk_id": "rag_chunk_1",
+        "source": "rag.txt",
+        "text": "Retrieval-Augmented Generation, commonly called RAG, combines information retrieval with language generation. A RAG system first searches a collection of documents for information relevant to a user's question. The retrieved passages are then provided to a language model as context. The"
+    },
+    {
+        "chunk_id": "rag_chunk_2",
+        "source": "rag.txt",
+        "text": "provided to a language model as context. The language model uses this context to generate an answer. RAG is useful because language models may not contain the latest information or may generate unsupported answers. Retrieval allows the system to provide"
+    },
+    {
+        "chunk_id": "rag_chunk_3",
+        "source": "rag.txt",
+        "text": "unsupported answers. Retrieval allows the system to provide external information at the time of the query. A well-designed RAG system can also provide citations so users can verify where an answer came from. A typical RAG pipeline contains document ingestion,"
+    },
+    {
+        "chunk_id": "rag_chunk_4",
+        "source": "rag.txt",
+        "text": "from. A typical RAG pipeline contains document ingestion, text cleaning, chunking, embedding generation, retrieval, reranking, context construction, and answer generation. Evaluation is then used to measure whether the retrieval and generation stages are working correctly."
+    },
+    {
+        "chunk_id": "reranking_chunk_1",
+        "source": "reranking.txt",
+        "text": "Reranking is a second-stage retrieval process used to improve the ordering of initially retrieved documents. A retrieval system may first return several candidate chunks using BM25, vector search, or hybrid retrieval. A reranker then examines the question and each candidate"
+    },
+    {
+        "chunk_id": "reranking_chunk_2",
+        "source": "reranking.txt",
+        "text": "reranker then examines the question and each candidate passage more closely. Cross-encoder models are commonly used for reranking. Unlike a bi-encoder that independently creates embeddings, a cross-encoder receives the question and candidate passage together and produces a relevance score. Reranking"
+    },
+    {
+        "chunk_id": "reranking_chunk_3",
+        "source": "reranking.txt",
+        "text": "passage together and produces a relevance score. Reranking can improve the quality of the final context supplied to a language model. However, cross-encoders are usually more computationally expensive than basic retrieval methods. A common architecture therefore retrieves a relatively small"
+    },
+    {
+        "chunk_id": "reranking_chunk_4",
+        "source": "reranking.txt",
+        "text": "A common architecture therefore retrieves a relatively small candidate set first and reranks only those candidates."
+    },
+    {
+        "chunk_id": "vector_search_chunk_1",
+        "source": "vector_search.txt",
+        "text": "Vector search retrieves information by comparing numerical representations of a query and stored documents. The query is converted into an embedding, and the embedding is compared with the vectors representing document chunks. Cosine similarity is one common metric for vector"
+    },
+    {
+        "chunk_id": "vector_search_chunk_2",
+        "source": "vector_search.txt",
+        "text": "Cosine similarity is one common metric for vector search. It measures the angle between two vectors and produces a value indicating how similar their directions are. A higher cosine similarity generally means that the texts have more similar semantic meaning."
+    },
+    {
+        "chunk_id": "vector_search_chunk_3",
+        "source": "vector_search.txt",
+        "text": "that the texts have more similar semantic meaning. A vector search system usually stores an embedding together with the original text and metadata. When a user asks a question, the system calculates the query embedding, compares it with stored vectors,"
+    },
+    {
+        "chunk_id": "vector_search_chunk_4",
+        "source": "vector_search.txt",
+        "text": "the query embedding, compares it with stored vectors, sorts the results by similarity, and returns the highest-ranking chunks."
+    }
+]

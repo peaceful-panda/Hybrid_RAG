@@ -1,0 +1,7 @@
+Python is a popular programming language used in software development, data analysis, and artificial intelligence.
+
+Retrieval-Augmented Generation, also known as RAG, combines information retrieval with language generation. A RAG system searches a collection of documents to find relevant information before generating an answer.
+
+Document ingestion is the process of loading and preparing source documents for later retrieval. Documents are often cleaned and divided into smaller passages called chunks.
+
+A retrieval system ranks document passages according to their relevance to a user's question. Better retrieval can help a language model produce more accurate and better-grounded answers.

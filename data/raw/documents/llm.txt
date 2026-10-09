@@ -1,0 +1,5 @@
+A large language model, or LLM, is a machine learning model trained to understand and generate human language. LLMs can answer questions, summarize information, write code, and perform many other language-related tasks.
+
+In a RAG system, the LLM is usually used after the retrieval stage. Retrieved document chunks are placed into a context supplied to the model. The model then generates an answer using that context.
+
+Grounded generation means that the generated answer is supported by the retrieved information. A good RAG system should avoid inventing facts that are not present in its available context. When the required information cannot be found, the system can be instructed to state that there is insufficient information.

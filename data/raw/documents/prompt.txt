@@ -1,0 +1,5 @@
+Prompt engineering is the practice of designing instructions that guide a language model toward a desired response. In a RAG system, prompts can define how the model should use retrieved context and how it should respond when information is missing.
+
+A retrieval prompt commonly contains the user's question, retrieved context, and instructions for generating an answer. The instructions can require the model to use only the supplied context and avoid unsupported claims.
+
+Clear prompts can also specify output requirements such as concise explanations, citations, structured answers, or uncertainty statements. Prompt design does not replace good retrieval, because a language model cannot reliably answer a question from context that was never retrieved.

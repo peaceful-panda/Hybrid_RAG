@@ -1,0 +1,5 @@
+Python is a general-purpose programming language widely used in software development, automation, data analysis, machine learning, and artificial intelligence. Its readable syntax makes it popular for both beginners and experienced developers.
+
+Python provides many libraries for building data and AI applications. Libraries can be installed using package managers such as pip. Virtual environments can be used to keep project dependencies isolated from other Python projects.
+
+Python programs can work with files, databases, web services, APIs, and machine learning models. In a RAG project, Python can be used to load documents, clean text, create chunks, generate embeddings, perform retrieval, rerank results, call a language model, and evaluate the final system.

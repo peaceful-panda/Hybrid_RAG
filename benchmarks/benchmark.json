@@ -1,0 +1,431 @@
+[
+  {
+    "question": "What does RAG stand for?",
+    "expected_answer": "RAG stands for Retrieval-Augmented Generation.",
+    "relevant_chunk_ids": ["rag_chunk_1"],
+    "question_type": "definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What two processes does RAG combine?",
+    "expected_answer": "RAG combines information retrieval with language generation.",
+    "relevant_chunk_ids": ["rag_chunk_1"],
+    "question_type": "conceptual",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What happens to retrieved passages in a RAG system?",
+    "expected_answer": "Retrieved passages are provided to a language model as context.",
+    "relevant_chunk_ids": ["rag_chunk_1", "rag_chunk_2"],
+    "question_type": "factual",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Why is RAG useful for language models?",
+    "expected_answer": "RAG provides external information and can reduce unsupported answers from language models.",
+    "relevant_chunk_ids": ["rag_chunk_2", "rag_chunk_3"],
+    "question_type": "conceptual",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Why can citations be useful in a RAG system?",
+    "expected_answer": "Citations allow users to verify where an answer came from.",
+    "relevant_chunk_ids": ["rag_chunk_3"],
+    "question_type": "factual",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What are the main stages of a typical RAG pipeline?",
+    "expected_answer": "The stages include document ingestion, text cleaning, chunking, embedding generation, retrieval, reranking, context construction, and answer generation.",
+    "relevant_chunk_ids": ["rag_chunk_4"],
+    "question_type": "conceptual",
+    "difficulty": "medium"
+  },
+
+  {
+    "question": "What are text embeddings?",
+    "expected_answer": "Text embeddings are numerical representations of text.",
+    "relevant_chunk_ids": ["embedding_chunk_1"],
+    "question_type": "definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What does an embedding model convert text into?",
+    "expected_answer": "An embedding model converts text into a vector containing many numerical dimensions.",
+    "relevant_chunk_ids": ["embedding_chunk_1"],
+    "question_type": "factual",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What happens to texts with similar meanings in embedding space?",
+    "expected_answer": "Texts with similar meanings tend to have vectors that are close together in the embedding space.",
+    "relevant_chunk_ids": ["embedding_chunk_1"],
+    "question_type": "conceptual",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is the main advantage of semantic search?",
+    "expected_answer": "Semantic search finds information based on meaning rather than only exact keywords.",
+    "relevant_chunk_ids": ["embedding_chunk_2"],
+    "question_type": "conceptual",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Which embedding model produces 384-dimensional vectors in this project?",
+    "expected_answer": "The all-MiniLM-L6-v2 model produces 384-dimensional vectors.",
+    "relevant_chunk_ids": ["embedding_chunk_3"],
+    "question_type": "factual",
+    "difficulty": "easy"
+  },
+  {
+    "question": "How are question embeddings used during retrieval?",
+    "expected_answer": "The question is converted into an embedding and compared with stored document embeddings using a similarity measure such as cosine similarity.",
+    "relevant_chunk_ids": ["embedding_chunk_4"],
+    "question_type": "process",
+    "difficulty": "medium"
+  },
+
+  {
+    "question": "What is BM25?",
+    "expected_answer": "BM25 is a traditional information retrieval algorithm used to rank documents according to their relevance to a search query.",
+    "relevant_chunk_ids": ["bm25_chunk_1"],
+    "question_type": "definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What factors does BM25 mainly use to rank documents?",
+    "expected_answer": "BM25 mainly considers the frequency of query terms and how common those terms are across the document collection.",
+    "relevant_chunk_ids": ["bm25_chunk_1"],
+    "question_type": "conceptual",
+    "difficulty": "medium"
+  },
+  {
+    "question": "When can BM25 work particularly well?",
+    "expected_answer": "BM25 can work particularly well when a question contains important technical keywords.",
+    "relevant_chunk_ids": ["bm25_chunk_2"],
+    "question_type": "factual",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Does BM25 require an embedding model?",
+    "expected_answer": "No, BM25 does not require an embedding model.",
+    "relevant_chunk_ids": ["bm25_chunk_2"],
+    "question_type": "factual",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What are two advantages of BM25?",
+    "expected_answer": "BM25 is simple, fast, and interpretable.",
+    "relevant_chunk_ids": ["bm25_chunk_3"],
+    "question_type": "conceptual",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Why can hybrid retrieval combine BM25 with semantic retrieval?",
+    "expected_answer": "BM25 may struggle when the wording of a question differs from a relevant document, so hybrid retrieval combines lexical and semantic methods.",
+    "relevant_chunk_ids": ["bm25_chunk_3", "bm25_chunk_4"],
+    "question_type": "comparison",
+    "difficulty": "medium"
+  },
+
+  {
+    "question": "What is vector search?",
+    "expected_answer": "Vector search retrieves information by comparing numerical representations of a query and stored documents.",
+    "relevant_chunk_ids": ["vector_search_chunk_1"],
+    "question_type": "definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What happens to a query in vector search?",
+    "expected_answer": "The query is converted into an embedding and compared with vectors representing document chunks.",
+    "relevant_chunk_ids": ["vector_search_chunk_1"],
+    "question_type": "process",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is cosine similarity used for?",
+    "expected_answer": "Cosine similarity measures the similarity between vectors by measuring the angle between them.",
+    "relevant_chunk_ids": ["vector_search_chunk_2"],
+    "question_type": "definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What does a higher cosine similarity generally indicate?",
+    "expected_answer": "A higher cosine similarity generally means that the texts have more similar semantic meaning.",
+    "relevant_chunk_ids": ["vector_search_chunk_2"],
+    "question_type": "interpretation",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What information does a vector search system usually store?",
+    "expected_answer": "A vector search system usually stores an embedding together with the original text and metadata.",
+    "relevant_chunk_ids": ["vector_search_chunk_3"],
+    "question_type": "factual",
+    "difficulty": "medium"
+  },
+  {
+    "question": "How does vector search select its final results?",
+    "expected_answer": "It compares the query embedding with stored vectors, sorts the results by similarity, and returns the highest-ranking chunks.",
+    "relevant_chunk_ids": ["vector_search_chunk_3", "vector_search_chunk_4"],
+    "question_type": "process",
+    "difficulty": "medium"
+  },
+
+  {
+    "question": "What is chunking?",
+    "expected_answer": "Chunking is the process of dividing large documents into smaller passages before retrieval.",
+    "relevant_chunk_ids": ["chunking_chunk_1"],
+    "question_type": "definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Why are documents divided into smaller chunks?",
+    "expected_answer": "Smaller chunks allow the retrieval system to identify specific passages that are relevant to a question.",
+    "relevant_chunk_ids": ["chunking_chunk_1"],
+    "question_type": "conceptual",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What does chunk size determine?",
+    "expected_answer": "Chunk size determines approximately how much text each passage contains.",
+    "relevant_chunk_ids": ["chunking_chunk_2"],
+    "question_type": "factual",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Why is chunk overlap useful?",
+    "expected_answer": "Chunk overlap helps preserve context when an important sentence crosses a chunk boundary.",
+    "relevant_chunk_ids": ["chunking_chunk_2", "chunking_chunk_3"],
+    "question_type": "conceptual",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What can happen when chunks are too small?",
+    "expected_answer": "Chunks that are too small may lose useful context.",
+    "relevant_chunk_ids": ["chunking_chunk_3"],
+    "question_type": "factual",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What can happen when chunks are too large?",
+    "expected_answer": "Chunks that are too large may contain unrelated information.",
+    "relevant_chunk_ids": ["chunking_chunk_3", "chunking_chunk_4"],
+    "question_type": "factual",
+    "difficulty": "easy"
+  },
+
+  {
+    "question": "What is reranking?",
+    "expected_answer": "Reranking is a second-stage retrieval process used to improve the ordering of initially retrieved documents.",
+    "relevant_chunk_ids": ["reranking_chunk_1"],
+    "question_type": "definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What retrieval methods can provide candidates for a reranker?",
+    "expected_answer": "BM25, vector search, or hybrid retrieval can provide candidate chunks for a reranker.",
+    "relevant_chunk_ids": ["reranking_chunk_1"],
+    "question_type": "factual",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What type of model is commonly used for reranking?",
+    "expected_answer": "Cross-encoder models are commonly used for reranking.",
+    "relevant_chunk_ids": ["reranking_chunk_2"],
+    "question_type": "factual",
+    "difficulty": "easy"
+  },
+  {
+    "question": "How does a cross-encoder differ from a bi-encoder during reranking?",
+    "expected_answer": "A cross-encoder receives the question and candidate passage together and produces a relevance score, while a bi-encoder independently creates embeddings.",
+    "relevant_chunk_ids": ["reranking_chunk_2"],
+    "question_type": "comparison",
+    "difficulty": "medium"
+  },
+  {
+    "question": "How can reranking improve a RAG system?",
+    "expected_answer": "Reranking can improve the quality of the final context supplied to a language model.",
+    "relevant_chunk_ids": ["reranking_chunk_3"],
+    "question_type": "conceptual",
+    "difficulty": "medium"
+  },
+  {
+    "question": "Why is reranking usually performed after initial retrieval?",
+    "expected_answer": "Cross-encoders are more computationally expensive, so a system can retrieve a small candidate set first and rerank only those candidates.",
+    "relevant_chunk_ids": ["reranking_chunk_3", "reranking_chunk_4"],
+    "question_type": "reasoning",
+    "difficulty": "medium"
+  },
+
+  {
+    "question": "What is an LLM?",
+    "expected_answer": "An LLM is a machine learning model trained to understand and generate human language.",
+    "relevant_chunk_ids": ["llm_chunk_1"],
+    "question_type": "definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What are some tasks LLMs can perform?",
+    "expected_answer": "LLMs can answer questions, summarize information, write code, and perform other language-related tasks.",
+    "relevant_chunk_ids": ["llm_chunk_1"],
+    "question_type": "factual",
+    "difficulty": "easy"
+  },
+  {
+    "question": "When is an LLM usually used in a RAG system?",
+    "expected_answer": "The LLM is usually used after the retrieval stage.",
+    "relevant_chunk_ids": ["llm_chunk_2"],
+    "question_type": "process",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is grounded generation?",
+    "expected_answer": "Grounded generation means that the generated answer is supported by the retrieved information.",
+    "relevant_chunk_ids": ["llm_chunk_2", "llm_chunk_3"],
+    "question_type": "definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What should a good RAG system avoid doing?",
+    "expected_answer": "A good RAG system should avoid inventing facts that are not present in its available context.",
+    "relevant_chunk_ids": ["llm_chunk_3"],
+    "question_type": "conceptual",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What should a system do when the required information cannot be found?",
+    "expected_answer": "The system can be instructed to state that there is insufficient information.",
+    "relevant_chunk_ids": ["llm_chunk_4"],
+    "question_type": "factual",
+    "difficulty": "easy"
+  },
+
+  {
+    "question": "What is prompt engineering?",
+    "expected_answer": "Prompt engineering is the practice of designing instructions that guide a language model toward a desired response.",
+    "relevant_chunk_ids": ["prompt_chunk_1"],
+    "question_type": "definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What can prompts define in a RAG system?",
+    "expected_answer": "Prompts can define how the model should use retrieved context and how it should respond when information is missing.",
+    "relevant_chunk_ids": ["prompt_chunk_1"],
+    "question_type": "conceptual",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What does a typical retrieval prompt contain?",
+    "expected_answer": "A retrieval prompt commonly contains the user's question, retrieved context, and instructions for generating an answer.",
+    "relevant_chunk_ids": ["prompt_chunk_2"],
+    "question_type": "factual",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Why should a RAG prompt instruct the model to use only supplied context?",
+    "expected_answer": "This helps the model avoid unsupported claims.",
+    "relevant_chunk_ids": ["prompt_chunk_2", "prompt_chunk_3"],
+    "question_type": "reasoning",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What output requirements can prompts specify?",
+    "expected_answer": "Prompts can specify concise explanations, citations, structured answers, or uncertainty statements.",
+    "relevant_chunk_ids": ["prompt_chunk_3"],
+    "question_type": "factual",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Why can prompt engineering not replace good retrieval?",
+    "expected_answer": "A language model cannot reliably answer a question from context that was never retrieved.",
+    "relevant_chunk_ids": ["prompt_chunk_3", "prompt_chunk_4"],
+    "question_type": "conceptual",
+    "difficulty": "medium"
+  },
+
+  {
+    "question": "What is Python commonly used for?",
+    "expected_answer": "Python is used in software development, automation, data analysis, machine learning, and artificial intelligence.",
+    "relevant_chunk_ids": ["python_chunk_1"],
+    "question_type": "factual",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Why is Python popular with beginners?",
+    "expected_answer": "Python's readable syntax makes it popular with beginners and experienced developers.",
+    "relevant_chunk_ids": ["python_chunk_1"],
+    "question_type": "conceptual",
+    "difficulty": "easy"
+  },
+  {
+    "question": "How can Python libraries be installed?",
+    "expected_answer": "Python libraries can be installed using package managers such as pip.",
+    "relevant_chunk_ids": ["python_chunk_2"],
+    "question_type": "factual",
+    "difficulty": "easy"
+  },
+  {
+    "question": "Why are virtual environments useful in Python?",
+    "expected_answer": "Virtual environments keep project dependencies isolated from other Python projects.",
+    "relevant_chunk_ids": ["python_chunk_2"],
+    "question_type": "conceptual",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What can Python programs work with?",
+    "expected_answer": "Python programs can work with files, databases, web services, APIs, and machine learning models.",
+    "relevant_chunk_ids": ["python_chunk_3"],
+    "question_type": "factual",
+    "difficulty": "easy"
+  },
+  {
+    "question": "How can Python be used in a RAG project?",
+    "expected_answer": "Python can load documents, clean text, create chunks, generate embeddings, perform retrieval, rerank results, call a language model, and evaluate the system.",
+    "relevant_chunk_ids": ["python_chunk_3", "python_chunk_4"],
+    "question_type": "application",
+    "difficulty": "medium"
+  },
+
+  {
+    "question": "What does RAG evaluation measure?",
+    "expected_answer": "Evaluation measures how well a RAG system performs on a collection of test questions.",
+    "relevant_chunk_ids": ["evalution_chunk_1"],
+    "question_type": "definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What is Recall at K used to evaluate?",
+    "expected_answer": "Recall measures whether the relevant information was retrieved.",
+    "relevant_chunk_ids": ["evalution_chunk_1", "evalution_chunk_2"],
+    "question_type": "definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What does Precision measure in retrieval evaluation?",
+    "expected_answer": "Precision measures how much of the retrieved information is relevant.",
+    "relevant_chunk_ids": ["evalution_chunk_2"],
+    "question_type": "definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What does Mean Reciprocal Rank measure?",
+    "expected_answer": "Mean Reciprocal Rank measures how high the first relevant result appears in the ranking.",
+    "relevant_chunk_ids": ["evalution_chunk_2"],
+    "question_type": "definition",
+    "difficulty": "easy"
+  },
+  {
+    "question": "What aspects can generation evaluation examine?",
+    "expected_answer": "Generation evaluation can examine answer correctness, faithfulness, context relevance, and citation correctness.",
+    "relevant_chunk_ids": ["evalution_chunk_3"],
+    "question_type": "factual",
+    "difficulty": "medium"
+  },
+  {
+    "question": "What additional measurements can a complete RAG evaluation record?",
+    "expected_answer": "A complete evaluation can record latency, token usage, and estimated cost.",
+    "relevant_chunk_ids": ["evalution_chunk_3"],
+    "question_type": "factual",
+    "difficulty": "easy"
+  }
+]

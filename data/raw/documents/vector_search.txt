@@ -1,0 +1,5 @@
+Vector search retrieves information by comparing numerical representations of a query and stored documents. The query is converted into an embedding, and the embedding is compared with the vectors representing document chunks.
+
+Cosine similarity is one common metric for vector search. It measures the angle between two vectors and produces a value indicating how similar their directions are. A higher cosine similarity generally means that the texts have more similar semantic meaning.
+
+A vector search system usually stores an embedding together with the original text and metadata. When a user asks a question, the system calculates the query embedding, compares it with stored vectors, sorts the results by similarity, and returns the highest-ranking chunks.

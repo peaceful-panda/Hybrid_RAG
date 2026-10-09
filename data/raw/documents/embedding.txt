@@ -1,0 +1,5 @@
+Text embeddings are numerical representations of text. An embedding model converts a sentence, paragraph, or document into a vector containing many numerical dimensions. Texts with similar meanings tend to have vectors that are close together in the embedding space.
+
+Semantic search uses embeddings to find information based on meaning rather than only exact keywords. For example, a question about loading documents may retrieve a passage discussing document ingestion even if the word loading is not present.
+
+The all-MiniLM-L6-v2 model is a commonly used sentence-transformer model for generating compact text embeddings. It produces vectors with 384 dimensions. During retrieval, the question is converted into an embedding and compared with stored document embeddings using a similarity measure such as cosine similarity.

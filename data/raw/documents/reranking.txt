@@ -1,0 +1,5 @@
+Reranking is a second-stage retrieval process used to improve the ordering of initially retrieved documents. A retrieval system may first return several candidate chunks using BM25, vector search, or hybrid retrieval. A reranker then examines the question and each candidate passage more closely.
+
+Cross-encoder models are commonly used for reranking. Unlike a bi-encoder that independently creates embeddings, a cross-encoder receives the question and candidate passage together and produces a relevance score.
+
+Reranking can improve the quality of the final context supplied to a language model. However, cross-encoders are usually more computationally expensive than basic retrieval methods. A common architecture therefore retrieves a relatively small candidate set first and reranks only those candidates.

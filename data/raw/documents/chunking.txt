@@ -1,0 +1,5 @@
+Chunking is the process of dividing large documents into smaller passages before retrieval. Large documents are usually too big to send directly into a retrieval or generation pipeline. Smaller chunks allow the retrieval system to identify the specific passages that are relevant to a question.
+
+A chunk size determines approximately how much text each passage contains. Chunk overlap allows consecutive chunks to share some words. Overlap can help preserve context when an important sentence crosses a chunk boundary.
+
+Poor chunking can reduce retrieval quality. Chunks that are too small may lose useful context, while chunks that are too large may contain unrelated information. A practical RAG system should choose chunk sizes based on the type and structure of the documents.

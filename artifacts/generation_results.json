@@ -1,0 +1,45 @@
+[
+    {
+        "question": "What does RAG stand for?",
+        "expected_answer": "RAG stands for Retrieval-Augmented Generation.",
+        "generated_answer": "I do not have enough information to answer this question based on the provided context.",
+        "retrieved_chunk_ids": [
+            "rag_chunk_2",
+            "bm25_chunk_2"
+        ],
+        "relevant_chunk_ids": [
+            "rag_chunk_1"
+        ],
+        "context_relevance": 0.0,
+        "latency_seconds": 3.753804922103882
+    },
+    {
+        "question": "What two processes does RAG combine?",
+        "expected_answer": "RAG combines information retrieval with language generation.",
+        "generated_answer": "GENERATION_FAILED",
+        "retrieved_chunk_ids": [
+            "rag_chunk_4",
+            "vector_search_chunk_2"
+        ],
+        "relevant_chunk_ids": [
+            "rag_chunk_1"
+        ],
+        "context_relevance": 0.0,
+        "latency_seconds": 4.485476732254028
+    },
+    {
+        "question": "What happens to retrieved passages in a RAG system?",
+        "expected_answer": "Retrieved passages are provided to a language model as context.",
+        "generated_answer": "The retrieved passages are provided to a language model as context [rag_chunk_1], which the language model then uses to generate an answer [rag_chunk_2].",
+        "retrieved_chunk_ids": [
+            "rag_chunk_1",
+            "rag_chunk_2"
+        ],
+        "relevant_chunk_ids": [
+            "rag_chunk_1",
+            "rag_chunk_2"
+        ],
+        "context_relevance": 1.0,
+        "latency_seconds": 4.40864372253418
+    }
+]

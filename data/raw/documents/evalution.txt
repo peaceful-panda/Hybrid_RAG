@@ -1,0 +1,5 @@
+Evaluation measures how well a RAG system performs on a collection of test questions. Retrieval evaluation can use metrics such as Recall at K, Precision at K, Mean Reciprocal Rank, and normalized Discounted Cumulative Gain.
+
+Recall measures whether the relevant information was retrieved. Precision measures how much of the retrieved information is relevant. Mean Reciprocal Rank measures how high the first relevant result appears in the ranking.
+
+Generation evaluation can examine answer correctness, faithfulness, context relevance, and citation correctness. A complete evaluation can also record latency, token usage, and estimated cost. Comparing BM25, dense retrieval, hybrid retrieval, and reranked retrieval helps identify which components improve the system.

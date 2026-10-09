@@ -1,0 +1,5 @@
+BM25 is a traditional information retrieval algorithm used to rank documents according to their relevance to a search query. It is based mainly on the frequency of query terms and how common those terms are across the document collection.
+
+BM25 can work particularly well when a question contains important technical keywords. Unlike semantic retrieval, BM25 does not need an embedding model. It tokenizes documents and queries and calculates a relevance score for each document.
+
+One advantage of BM25 is that it is simple, fast, and interpretable. However, it may struggle when the wording of a question differs significantly from the wording in a relevant document. This is one reason hybrid retrieval combines lexical retrieval methods such as BM25 with semantic retrieval.
