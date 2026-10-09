@@ -313,5 +313,5 @@ def answer_question(question):
 # ============================================================
 
 if __name__ == "__main__":
-    question = "What is document ingestion?"
+    question = "What components does a typical RAG pipeline contain?"
     answer_question(question)
